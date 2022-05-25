@@ -1,8 +1,12 @@
-import styled from "styled-components";
+import React from "react";
+
+// default for css modules; classes/styles - personal choice
+import styles from "./Button.module.css";
+// import styled from "styled-components";
 //import './Button.css';
 
 //attack template, default JS feature
-const Button = styled.button`
+/* const Button = styled.button`
     width: 100%;
     font: inherit;
     padding: 0.5rem 1.5rem;
@@ -26,14 +30,14 @@ const Button = styled.button`
       border-color: #ac0e77;
       box-shadow: 0 0 8px rgba(0, 0, 0, 0.26);
     }
-`;
+`; */
 
-//const Button = props => {
-//return (
-//<button type={props.type} className="button" onClick={props.onClick}>
-//{props.children}
-//</button>
-//);
-//};
+const Button = (props) => {
+  return (
+    <button type={props.type} className={styles.button} onClick={props.onClick}>
+      {props.children}
+    </button>
+  );
+};
 
 export default Button;
